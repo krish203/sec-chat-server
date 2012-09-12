@@ -1,0 +1,8 @@
+keytool -genkey -alias server -keyalg RSA -keystore .serverstore
+
+keytool -list -keystore .serverstore
+
+keytool -export -alias krish -file pubkrish.cer -keystore krish.key
+
+keytool -import -alias pub_server -file pubserver.cer -keystore krish.key
+ 
